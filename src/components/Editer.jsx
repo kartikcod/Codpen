@@ -13,7 +13,7 @@ const Heading = styled(Box)`
   background: #1d1e22;
   display: flex;
   padding: 20px 10px;
-  gap: 2;
+  
 `;
 
 const Header = styled(Box)`
