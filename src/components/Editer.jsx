@@ -6,14 +6,14 @@ import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/javascript/javascript";
- 
-import '../App.css';
+
+import "../App.css";
 
 const Heading = styled(Box)`
   background: #1d1e22;
   display: flex;
-  padding: 20px 10px;
-  
+  padding: 9px 20px;
+  border-top: 5px solid hsl(225.88deg 3.99% 22.86%);
 `;
 
 const Header = styled(Box)`
@@ -22,10 +22,20 @@ const Header = styled(Box)`
   display: flex;
   font-weight: 700;
   justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  
+  
 `;
-export const Editer = ({langName,icon,color}) => {
+
+const Container=styled(Box)`
+  flex-grow: 1;
+`
+
+export const Editer = ({ langName, icon, color }) => {
   return (
     <>
+   < Container>
+
       <Header>
         <Heading>
           <Box
@@ -37,22 +47,27 @@ export const Editer = ({langName,icon,color}) => {
               borderRadius: 15,
               display: "flex",
               placeContent: "center",
-              marginLeft: "12px",
-              color:"black",
-             
+              color: "black",
+              marginRight: "12px",
+              marginTop: "-1px",
             }}
           >
-           {icon}
+            {icon}
           </Box>
-         {langName}
+          {langName}
         </Heading>
-        <CloseFullscreenIcon />
-      </Header> 
-      <ControlledEditer className='Controlled-editer'
-          options={{
-            theme:"material",
-            lineNumbers:true,
-          }} />
+        <CloseFullscreenIcon style={{margin:"12px"}} />
+      </Header>
+      
+      <ControlledEditer
+        className="Controlled-editer"
+        options={{
+          theme: "material",
+          lineNumbers: true,
+        }}
+      />
+      </Container>
+    
     </>
   );
 };

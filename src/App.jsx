@@ -9,6 +9,7 @@ function App() {
     <> 
        <Navbar/>
        <Code/>
+       dfdfd
     </>
   );
 }

@@ -1,11 +1,16 @@
+ *{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+ }
+ 
  .CodeMirror{
-    height: 390px !important;
+    height: 300px !important;
     color: #ffff !important ;
  }
  .CodeMirror-gutter{
-    background: #1d1e22 !important;
+    background: #000000 !important;
  }
  .CodeMirror-scroll{
     background:#1d1e22 !important;
-    
  }
