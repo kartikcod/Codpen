@@ -1,23 +1,24 @@
-import { useContext, useState } from "react";
+import { createContext, useState } from "react";
 
-const context = useContext();
+export const DataContext = createContext();
 
-const [html, sethtml] = useState("");
-const [css, setcss] = useState("");
-const [javascript, setjavascript] = useState("");
+export const DataProvider = ({ children }) => {
+  const [html, setHtml] = useState("");
+  const [css, setCss] = useState("");
+  const [Js, setJs] = useState("");
 
-export const DataProvider = () => {
   return (
-    <context.provider>
-      value=
-      {{
+    <DataContext.Provider
+      value={{
         html,
         css,
-        javascript,
-        sethtml,
-        setcss,
-        setjavascript,
+        Js,
+        setHtml, 
+        setCss,
+        setJs,
       }}
-    </context.provider>
+    >
+      {children}
+    </DataContext.Provider>
   );
 };
